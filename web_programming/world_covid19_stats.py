@@ -13,15 +13,17 @@ This data is being scrapped from 'https://www.worldometers.info/coronavirus/'.
 # ]
 # ///
 
+from typing import Dict
+
 import httpx
 from bs4 import BeautifulSoup
 
 
 def world_covid19_stats(
     url: str = "https://www.worldometers.info/coronavirus/",
-) -> dict:
+) -> Dict[str, str]:
     """
-    Return a dict of current worldwide COVID-19 statistics
+    Return a dict of current worldwide COVID-19 statistics.
     """
     soup = BeautifulSoup(
         httpx.get(url, timeout=10, follow_redirects=True).text, "html.parser"

@@ -1,4 +1,8 @@
-# Algorithms to determine if a string is palindrome
+"""
+Algorithms to determine if a string is a palindrome.
+
+A string is a palindrome if it reads the same forwards and backwards.
+"""
 
 from timeit import timeit
 
